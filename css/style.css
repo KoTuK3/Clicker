@@ -1,0 +1,59 @@
+p {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: rgb(230, 138, 138);
+    text-align: center;
+    background: rgb(58, 45, 129);
+    user-select: none;
+}
+.line {
+    margin-top: 0px;
+    display: block;
+    color: rgb(58, 45, 129);
+    background-color: rgb(58, 45, 129);
+    text-align: center;
+    font-family: sans-serif;    
+}
+
+#button {
+    position: absolute;
+    font-size: 16px;
+    height: 100px;
+    width: 100px;
+    color: rgb(58, 218, 19);
+    background: blueviolet;
+    font-weight: 900;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+div {
+    display: inline;
+    top: 0;
+    left: 0;
+    user-select: none;
+
+}
+
+.plus {
+    display: inline-block;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 114px;
+}
+
+.plusPerSecond {
+    display: inline-block;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 114px;
+}
+.buttons {
+    display: inline-block;
+}
+.paragraphs {
+    display: inline-block;
+}
+
