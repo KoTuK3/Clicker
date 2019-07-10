@@ -10,12 +10,12 @@ const timerId = setInterval(function() {
     score.innerHTML = "Score: " + scoreClicks;
 }, 1000);
 
-const clickButton = document.getElementById('button').onclick = function() {
+document.getElementById('button').onclick = function() {
     scoreClicks += bonusClicks;
     score.innerHTML = "Score: " + scoreClicks;
     
 }
-const plusOneButton = document.getElementById('plusOne').onclick = function() {
+document.getElementById('plusOne').onclick = function() {
     if (scoreClicks >= priceForOneClick) {
     bonusClicks++;
     scoreClicks -= priceForOneClick;
@@ -26,7 +26,7 @@ const plusOneButton = document.getElementById('plusOne').onclick = function() {
     } else return
 }
 
-const plusTenButton = document.getElementById('plusTen').onclick = function() {
+document.getElementById('plusTen').onclick = function() {
     if (scoreClicks >= priceForTenClick) {
     bonusClicks += 10;
     scoreClicks -= priceForTenClick;
@@ -37,12 +37,12 @@ const plusTenButton = document.getElementById('plusTen').onclick = function() {
     } else return
 }
 
-const plusTrillionButton = document.getElementById('test').onclick = function() {
+document.getElementById('test').onclick = function() {
     scoreClicks += 1000000000 ;
     score.innerHTML = "Score: " + scoreClicks;
 }
 
-const plusOnePerSecondButton = document.getElementById('plusOnePerSecond').onclick = function() {
+document.getElementById('plusOnePerSecond').onclick = function() {
     if (scoreClicks >= priceForOneClickSec) {
     scoreClicks -=priceForOneClickSec;
     timerBonus += 1;
@@ -53,7 +53,7 @@ const plusOnePerSecondButton = document.getElementById('plusOnePerSecond').oncli
     } else return
 }
 
-const plusTenPerSecondButton = document.getElementById('plusTenPerSecond').onclick = function() {
+document.getElementById('plusTenPerSecond').onclick = function() {
     if (scoreClicks >= priceForTenClickSec) {
         scoreClicks -=priceForTenClickSec;
         timerBonus += 10;
@@ -64,7 +64,7 @@ const plusTenPerSecondButton = document.getElementById('plusTenPerSecond').oncli
     } else return
 }
 
-const plusThousandPerSecondButton = document.getElementById('testPerSecond').onclick = function() {
+document.getElementById('testPerSecond').onclick = function() {
     timerBonus += 1000;
     score.innerHTML = "Score: " + scoreClicks;
     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
