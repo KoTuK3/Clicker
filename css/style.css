@@ -31,11 +31,13 @@ div {
     font-size: 16px;
     height: 200px;
     width: 200px;
-    color: rgb(58, 218, 19);
-    background: blueviolet;
+    color: rgb(255, 183, 231);
+    background-color: rgb(72, 30, 100);
     font-weight: 900;
     margin: 10px auto;
     border-radius: 100px;
+    border-color: rgb(26, 11, 109);
+    outline-width: 0;
 }
 .plus {
     display: inline-block;
