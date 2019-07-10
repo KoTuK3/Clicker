@@ -56,10 +56,10 @@ document.getElementById('plusTen').onclick = function() {
     } else return
 }
 
-document.getElementById('test').onclick = function() {
-    scoreClicks += 1000000000 ;
-    score.innerHTML = "Score: " + scoreClicks;
-}
+// document.getElementById('test').onclick = function() {
+//     scoreClicks += 1000000000 ;
+//     score.innerHTML = "Score: " + scoreClicks;
+// }
 
 document.getElementById('plusOnePerSecond').onclick = function() {
     if (scoreClicks >= priceForOneClickSec) {
@@ -83,9 +83,9 @@ document.getElementById('plusTenPerSecond').onclick = function() {
     } else return
 }
 
-document.getElementById('testPerSecond').onclick = function() {
-    timerBonus += 1000;
-    score.innerHTML = "Score: " + scoreClicks;
-    clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
-}
+// document.getElementById('testPerSecond').onclick = function() {
+//     timerBonus += 1000;
+//     score.innerHTML = "Score: " + scoreClicks;
+//     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
+// }
 
