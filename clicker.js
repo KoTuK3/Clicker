@@ -1,22 +1,21 @@
 let scoreClicks = 0;
 let bonusClicks = 1;
 let timerBonus = 0;
-let p = document.createElement('p');
 let priceForOneClick = 10;
 let priceForTenClick = 100;
 let priceForOneClickSec = 20;
 let priceForTenClickSec = 200;
-let timerId = setInterval(function() {
+const timerId = setInterval(function() {
     scoreClicks += timerBonus;
     score.innerHTML = "Score: " + scoreClicks;
 }, 1000);
 
-document.getElementById('button').onclick = function() {
+const clickButton = document.getElementById('button').onclick = function() {
     scoreClicks += bonusClicks;
     score.innerHTML = "Score: " + scoreClicks;
     
 }
-document.getElementById('plusOne').onclick = function() {
+const plusOneButton = document.getElementById('plusOne').onclick = function() {
     if (scoreClicks >= priceForOneClick) {
     bonusClicks++;
     scoreClicks -= priceForOneClick;
@@ -24,10 +23,10 @@ document.getElementById('plusOne').onclick = function() {
     click.innerHTML = "Click power: " + bonusClicks;
     score.innerHTML = "Score: " + scoreClicks;
     pricePlusOne.innerHTML = "Price: " + priceForOneClick;
-    }
+    } else return
 }
 
-document.getElementById('plusTen').onclick = function() {
+const plusTenButton = document.getElementById('plusTen').onclick = function() {
     if (scoreClicks >= priceForTenClick) {
     bonusClicks += 10;
     scoreClicks -= priceForTenClick;
@@ -35,15 +34,15 @@ document.getElementById('plusTen').onclick = function() {
     click.innerHTML = "Click power: " + bonusClicks;    
     score.innerHTML = "Score: " + scoreClicks;
     pricePlusTen.innerHTML = "Price: " + priceForTenClick;
-    }
+    } else return
 }
 
-document.getElementById('test').onclick = function() {
+const plusTrillionButton = document.getElementById('test').onclick = function() {
     scoreClicks += 1000000000 ;
     score.innerHTML = "Score: " + scoreClicks;
 }
 
-document.getElementById('plusOnePerSecond').onclick = function() {
+const plusOnePerSecondButton = document.getElementById('plusOnePerSecond').onclick = function() {
     if (scoreClicks >= priceForOneClickSec) {
     scoreClicks -=priceForOneClickSec;
     timerBonus += 1;
@@ -51,10 +50,10 @@ document.getElementById('plusOnePerSecond').onclick = function() {
     score.innerHTML = "Score: " + scoreClicks;
     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
     pricePlusOnePerSecond.innerHTML = "Price: " + priceForOneClickSec;
-    }
+    } else return
 }
 
-document.getElementById('plusTenPerSecond').onclick = function() {
+const plusTenPerSecondButton = document.getElementById('plusTenPerSecond').onclick = function() {
     if (scoreClicks >= priceForTenClickSec) {
         scoreClicks -=priceForTenClickSec;
         timerBonus += 10;
@@ -62,10 +61,10 @@ document.getElementById('plusTenPerSecond').onclick = function() {
         score.innerHTML = "Score: " + scoreClicks;
         clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
         pricePlusTenPerSecond.innerHTML = "Price: " + priceForTenClickSec;
-    }
+    } else return
 }
 
-document.getElementById('testPerSecond').onclick = function() {
+const plusThousandPerSecondButton = document.getElementById('testPerSecond').onclick = function() {
     timerBonus += 1000;
     score.innerHTML = "Score: " + scoreClicks;
     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
