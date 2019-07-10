@@ -54,7 +54,8 @@ div {
     border-radius: 5px 10px;
     color: bisque;
     border-color: rgb(58, 45, 129);
-    background: linear-gradient(180deg, rgb(173, 88, 166),rgb(88, 45, 129))
+    background: linear-gradient(180deg, rgb(173, 88, 166),rgb(88, 45, 129));
+    outline-width: 0;
 }
 .paragraphs {
     display: inline-block;
