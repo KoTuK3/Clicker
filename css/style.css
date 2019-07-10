@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    background: linear-gradient(0deg, rgb(230, 138, 138),rgb(58, 45, 129))
+    background: linear-gradient(0deg, rgb(214, 118, 182),rgb(58, 45, 129))
 }
 p {
     font-family: sans-serif;
@@ -32,7 +32,7 @@ div {
     height: 200px;
     width: 200px;
     color: rgb(255, 183, 231);
-    background-color: rgb(72, 30, 100);
+    background-color: rgb(90, 30, 109);
     font-weight: 900;
     margin: 10px auto;
     border-radius: 100px;
