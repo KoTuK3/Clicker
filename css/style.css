@@ -1,59 +1,94 @@
+body {
+    height: 100vh;
+    background: linear-gradient(0deg, rgb(230, 138, 138),rgb(58, 45, 129))
+}
 p {
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 900;
     color: rgb(230, 138, 138);
     text-align: center;
-    background: rgb(58, 45, 129);
+    background: none;
+    user-select: none;
+}
+div {
+    background: none;
+    display: inline;
+    top: 0;
+    left: 0;
     user-select: none;
 }
 .line {
     margin-top: 0px;
     display: block;
-    color: rgb(58, 45, 129);
-    background-color: rgb(58, 45, 129);
+    opacity: .0;
     text-align: center;
     font-family: sans-serif;    
 }
-
 #button {
-    position: absolute;
+    display: block;
+    position: relative;
     font-size: 16px;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     color: rgb(58, 218, 19);
     background: blueviolet;
     font-weight: 900;
-    margin-left: 10px;
-    margin-top: 10px;
-
+    margin: 10px auto;
+    border-radius: 100px;
 }
-
-div {
-    display: inline;
-    top: 0;
-    left: 0;
-    user-select: none;
-
-}
-
 .plus {
     display: inline-block;
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 114px;
+    position: relative;
+    margin: 20px auto;
 }
-
 .plusPerSecond {
     display: inline-block;
-    position: absolute;
-    margin-top: 160px;
-    margin-left: 114px;
+    position: relative;
+    margin: auto;
 }
 .buttons {
     display: inline-block;
+    border-radius: 5px 10px;
+    color: bisque;
+    border-color: rgb(58, 45, 129);
+    background: linear-gradient(180deg, rgb(173, 88, 166),rgb(88, 45, 129))
 }
 .paragraphs {
     display: inline-block;
 }
+progress {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-size: auto;
+    display: block;
+    width: 500px;
+    margin: auto;
+}
+progress::-webkit-progress-bar {
+    margin-top: 5px;
+    background: rgb(8, 20, 185);
+    border-radius: 50px;
+}
+progress::-webkit-progress-value {
+    display: inline-block;
+    height: 5px;
+    border-radius: 50px;
+    margin-top: auto;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: auto;
+    background: rgb(230, 138, 138);
+}
+.box {
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: auto; 
+}
 
+.paragraphs {
+    color: rgb(235, 177, 177);
+}

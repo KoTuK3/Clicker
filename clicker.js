@@ -5,15 +5,34 @@ let priceForOneClick = 10;
 let priceForTenClick = 100;
 let priceForOneClickSec = 20;
 let priceForTenClickSec = 200;
+let experiencePoints = 0;
+let max = 100
+let level = 0
+function checkExperiencePoints() {
+    if (experiencePoints >= max) {
+        experiencePoints = 0;
+        max *= 3;
+        level++
+        lvl.innerHTML = "Level: " + level;
+        document.getElementById('experience').setAttribute('value', experiencePoints);
+        document.getElementById('experience').setAttribute('max', max);
+    }
+}
+document.getElementById('experience').setAttribute('max', max);
 const timerId = setInterval(function() {
     scoreClicks += timerBonus;
     score.innerHTML = "Score: " + scoreClicks;
+    experiencePoints += timerBonus;
+    document.getElementById('experience').setAttribute('value', experiencePoints);
+    checkExperiencePoints();
 }, 1000);
 
 document.getElementById('button').onclick = function() {
     scoreClicks += bonusClicks;
+    experiencePoints += bonusClicks;
+    document.getElementById('experience').setAttribute('value', experiencePoints);
     score.innerHTML = "Score: " + scoreClicks;
-    
+    checkExperiencePoints();
 }
 document.getElementById('plusOne').onclick = function() {
     if (scoreClicks >= priceForOneClick) {
@@ -69,3 +88,4 @@ document.getElementById('testPerSecond').onclick = function() {
     score.innerHTML = "Score: " + scoreClicks;
     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
 }
+
