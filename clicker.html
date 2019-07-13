@@ -1,43 +1,46 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Тестовая страница</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <p>Clicker</p>
   <div class="line">Пасхалочка</div>
   <p id="lvl">Level: 0</p>
-  <progress id="experience" value="0" max=""></progress>
+  <div id="myProgressBar">
+    <div id="barValue"></div>
+  </div>
   <div class="line">d</div>
-      <p id="score">Score: 0</p>
-      <p id="click">Click power: 1</p>
-      <p id="clicksPerSecond">Clicks per second: 0</p>
-    <div class="box">
-        <button id="button">Click</button>
-      <div class="plus">
-        <button class="buttons" id="plusOne">+1</button>
-        <p class="paragraphs" id="pricePlusOne">Price: 10</p>
-        <button class="buttons" id="plusTen">+10</button>
-        <p class="paragraphs" id="pricePlusTen">Price: 100</p>
-        <!-- <button class="buttons" id="test">+10000</button>
+  <p id="score">Score: 0</p>
+  <p id="click">Click power: 1</p>
+  <p id="clicksPerSecond">Clicks per second: 0</p>
+  <div class="box">
+    <button id="button">Click</button>
+    <div class="plus">
+      <button class="buttons" id="plusOne">+1</button>
+      <p class="paragraphs" id="pricePlusOne">Price: 10</p>
+      <button class="buttons" id="plusTen">+10</button>
+      <p class="paragraphs" id="pricePlusTen">Price: 100</p>
+      <!-- <button class="buttons" id="test">+10000</button>
         <p class="paragraphs">Test button!</p> -->
-      </div>
-      <br>
-      <div class="plusPerSecond">
-        <button class="buttons" id="plusOnePerSecond">+1 in sec</button>
-        <p class="paragraphs" id="pricePlusOnePerSecond">Price: 20</p>
-        <button class="buttons" id="plusTenPerSecond">+10 in sec</button>
-        <p class="paragraphs" id="pricePlusTenPerSecond">Price: 200</p>
-        <!-- <button class="buttons" id="testPerSecond">+1000 in sec</button>
-        <p class="paragraphs" id="testSecond">Test button!</p> -->
-      </div>
     </div>
-      
-  <script src="clicker.js"> </script>
+    <br />
+    <div class="plusPerSecond">
+      <button class="buttons" id="plusOnePerSecond">+1 in sec</button>
+      <p class="paragraphs" id="pricePlusOnePerSecond">Price: 20</p>
+      <button class="buttons" id="plusTenPerSecond">+10 in sec</button>
+      <p class="paragraphs" id="pricePlusTenPerSecond">Price: 200</p>
+      <!-- <button class="buttons" id="testPerSecond">+1000 in sec</button>
+        <p class="paragraphs" id="testSecond">Test button!</p> -->
+    </div>
+  </div>
+
+  <script src="clicker.js"></script>
 </body>
+
 </html>
-  
