@@ -10,6 +10,46 @@ let max = 100;
 let level = 0;
 let percent = 0;
 
+window.onload = function() {
+  if (localStorage.getItem('scoreClicks') !== null) {
+    scoreClicks = +localStorage.getItem('scoreClicks');
+    bonusClicks = +localStorage.getItem('bonusClicks');
+    timerBonus = +localStorage.getItem('timerBonus');
+    priceForOneClick = +localStorage.getItem('priceForOneClick');
+    priceForTenClick = +localStorage.getItem('priceForTenClick');
+    priceForOneClickSec = +localStorage.getItem('priceForOneClickSec');
+    priceForTenClickSec = +localStorage.getItem('priceForTenClickSec');
+    experiencePoints = +localStorage.getItem('experiencePoints');
+    max = +localStorage.getItem('max');
+    level = +localStorage.getItem('level');
+    percent = +localStorage.getItem('percent');
+
+    lvl.innerHTML = "Level: " + level;
+    barValue.style.width = percent + "%";
+    score.innerHTML = "Score: " + scoreClicks;
+    click.innerHTML = "Click power: " + bonusClicks;
+    pricePlusOne.innerHTML = "Price: " + priceForOneClick;
+    pricePlusTen.innerHTML = "Price: " + priceForTenClick;
+    clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
+    pricePlusOnePerSecond.innerHTML = "Price: " + priceForOneClickSec;
+    pricePlusTen.innerHTML = "Price: " + priceForTenClick;
+  }
+}
+
+function setLocalStorage() {
+  localStorage.setItem('scoreClicks', scoreClicks);
+  localStorage.setItem('bonusClicks', bonusClicks);
+  localStorage.setItem('timerBonus', timerBonus);
+  localStorage.setItem('priceForOneClick', priceForOneClick);
+  localStorage.setItem('priceForTenClick', priceForTenClick);
+  localStorage.setItem('priceForOneClickSec', priceForOneClickSec);
+  localStorage.setItem('priceForTenClickSec', priceForTenClickSec);
+  localStorage.setItem('experiencePoints', experiencePoints);
+  localStorage.setItem('max', max);
+  localStorage.setItem('level', level);
+  localStorage.setItem('percent', percent);
+}
+
 function checkExperiencePoints() {
   if (experiencePoints >= max) {
     experiencePoints = 0;
@@ -37,6 +77,7 @@ document.getElementById("button").addEventListener("click", function () {
   percent = experiencePoints / (max / 100);
   barValue.style.width = percent + "%"
   checkExperiencePoints();
+  setLocalStorage();
 });
 document.getElementById("plusOne").addEventListener("click", function () {
   if (scoreClicks >= priceForOneClick) {
