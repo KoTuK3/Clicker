@@ -68,6 +68,7 @@ const timerId = setInterval(function () {
   percent = experiencePoints / (max / 100);
   barValue.style.width = percent + "%"
   checkExperiencePoints();
+  setLocalStorage()
 }, 1000);
 
 document.getElementById("button").addEventListener("click", function () {
