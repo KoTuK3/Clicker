@@ -10,7 +10,7 @@ let max = 100;
 let level = 0;
 let percent = 0;
 
-window.onload = function() {
+window.onload = function () {
   if (localStorage.getItem('scoreClicks') !== null) {
     scoreClicks = +localStorage.getItem('scoreClicks');
     bonusClicks = +localStorage.getItem('bonusClicks');
@@ -52,10 +52,10 @@ function setLocalStorage() {
 
 function checkExperiencePoints() {
   if (experiencePoints >= max) {
-    experiencePoints = 0;
+    experiencePoints -= max;
     max *= 3;
     level++;
-    percent = 0;
+    percent = experiencePoints / (max / 100);
     lvl.innerHTML = "Level: " + level;
     barValue.style.width = percent + "%";
   }
@@ -102,9 +102,9 @@ document.getElementById("plusTen").addEventListener("click", function () {
   } else return;
 });
 
-// document.getElementById('test').addEventListener("click", function() {
-//     scoreClicks += 1000000000 ;
-//     score.innerHTML = "Score: " + scoreClicks;
+// document.getElementById('test').addEventListener("click", function () { //test button
+//   scoreClicks += 1000000000;
+//   score.innerHTML = "Score: " + scoreClicks;
 // });
 
 document.getElementById("plusOnePerSecond").addEventListener("click", function () {
@@ -129,8 +129,8 @@ document.getElementById("plusTenPerSecond").addEventListener("click", function (
   } else return;
 });
 
-// document.getElementById('testPerSecond').addEventListener("click", function() {
-//     timerBonus += 1000;
-//     score.innerHTML = "Score: " + scoreClicks;
-//     clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
+// document.getElementById('testPerSecond').addEventListener("click", function () { //test button
+//   timerBonus += 1000;
+//   score.innerHTML = "Score: " + scoreClicks;
+//   clicksPerSecond.innerHTML = "Clicks per second: " + timerBonus;
 // });
